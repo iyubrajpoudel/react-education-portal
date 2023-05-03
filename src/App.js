@@ -2,7 +2,11 @@ import React from 'react'
 
 const App = () => {
   return (
-    <>My React App!</>
+    <>
+      <p className='text-blue-500 text-3xl font-semibold'>
+        My React App with Tailwind CSS!
+      </p>
+    </>
   )
 }
 
