@@ -4,7 +4,7 @@ import { ImBooks } from "react-icons/im"
 import { TbFileCertificate } from "react-icons/tb"
 
 
-const FeatureBox = ({ icon, title, description }) => {
+const FeatureCard = ({ icon, title, description }) => {
     return (
         <div className='bg-blue-50 px-4 py-10 w-full md:w-[45%] lg:w-[31%] flex flex-col justify-center gap-4'>
             <div className="icon text-blue-700 text-6xl">{icon}</div>
@@ -28,9 +28,9 @@ const Features = () => {
                         <p className='text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus alias consequatur sunt.</p>
                     </div>
                     <div className="row boxes flex gap-6 flex-wrap justify-center">
-                        <FeatureBox icon={<HiAcademicCap />} title="Scholarship Facility" description={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsam optio necessitatibus excepturi quas minima quisquam deleniti, id expedita amet placeat maxime.`} />
-                        <FeatureBox icon={<ImBooks />} title="Online Courses" description={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsam optio necessitatibus excepturi quas minima quisquam deleniti, id expedita amet placeat maxime.`} />
-                        <FeatureBox icon={<TbFileCertificate />} title="Global Certification" description={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsam optio necessitatibus excepturi quas minima quisquam deleniti, id expedita amet placeat maxime.`} />
+                        <FeatureCard icon={<HiAcademicCap />} title="Scholarship Facility" description={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsam optio necessitatibus excepturi quas minima quisquam deleniti, id expedita amet placeat maxime.`} />
+                        <FeatureCard icon={<ImBooks />} title="Online Courses" description={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsam optio necessitatibus excepturi quas minima quisquam deleniti, id expedita amet placeat maxime.`} />
+                        <FeatureCard icon={<TbFileCertificate />} title="Global Certification" description={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsam optio necessitatibus excepturi quas minima quisquam deleniti, id expedita amet placeat maxime.`} />
                     </div>
                 </div>
             </div>
