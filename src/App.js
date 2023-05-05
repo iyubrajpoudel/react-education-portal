@@ -1,11 +1,10 @@
 import React from 'react'
+import Home from './pages/home/Home';
 
 const App = () => {
   return (
     <>
-      <p className='text-blue-500 text-3xl font-semibold'>
-        My React App with Tailwind CSS!
-      </p>
+      <Home />
     </>
   )
 }
