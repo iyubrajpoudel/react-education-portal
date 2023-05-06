@@ -6,7 +6,7 @@ import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa"
 const Footer = () => {
     return (
         <>
-            <div className="wrappper bg-[#101c32] px-2 pt-[6rem] pb-[2rem]">
+            <div className="wrapper bg-[#101c32] px-2 pt-[6rem] pb-[2rem]">
                 <div className="container max-w-[1280px] mx-auto text-white ">
                     <div className="row flex flex-col items-center gap-10 md:flex-row md:items-start md:gap-8 text-center md:text-left flex-wrap">
                         <div className="col space-y-8">
