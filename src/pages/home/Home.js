@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar/Navbar'
 import Hero from '../../components/hero/Hero'
 import Features from '../../components/features/Features'
 import Courses from '../../components/courses/Courses'
+import Register from '../../components/register/Register'
 
 const Home = () => {
     return (
@@ -18,6 +19,9 @@ const Home = () => {
             </section>
             <section className='px-2 py-[6rem]'>
                 <Courses />
+            </section>
+            <section>
+                <Register />
             </section>
         </>
     )

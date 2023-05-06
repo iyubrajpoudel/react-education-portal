@@ -1,5 +1,6 @@
 import React from 'react'
 import background from './assets/images/back.jpg'
+import './Hero.css'
 
 /* 
 const Button = ({ children, classes }) => {
