@@ -5,6 +5,7 @@ import Features from '../../components/features/Features'
 import Courses from '../../components/courses/Courses'
 import Register from '../../components/register/Register'
 import Experts from '../../components/experts/Experts'
+import Footer from './../../components/footer/Footer';
 
 const Home = () => {
     return (
@@ -27,6 +28,9 @@ const Home = () => {
             <section className="px-2 py-[6rem]">
                 <Experts />
             </section>
+            <footer>
+                <Footer />
+            </footer>
         </>
     )
 }
