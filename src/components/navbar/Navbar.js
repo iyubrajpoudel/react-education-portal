@@ -4,6 +4,9 @@ import Logo from "./assets/images/logo.svg"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { FaTimes } from "react-icons/fa"
 
+import { Link } from 'react-router-dom'
+
+
 const Navbar = () => {
 
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -32,11 +35,11 @@ const Navbar = () => {
                                 </div>
                                 <div>
                                     <ul className="menu-list text-xl font-semibold text-white lg:text-purple-800 flex flex-col lg:flex-row gap-10 ">
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><a href="/">Home</a></li>
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><a href="#">About</a></li>
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><a href="#">Blogs</a></li>
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><a href="#">Courses</a></li>
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><a href="#">Contact</a></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="/" className=''>Home</Link></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="">About</Link></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="">Blogs</Link></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="/courses">Courses</Link></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="">Contact</Link></li>
                                     </ul>
                                 </div>
                             </div>
