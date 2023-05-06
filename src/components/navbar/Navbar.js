@@ -4,7 +4,9 @@ import Logo from "./assets/images/logo.svg"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { FaTimes } from "react-icons/fa"
 
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+
+import "./Navbar.css";
 
 
 const Navbar = () => {
@@ -35,11 +37,11 @@ const Navbar = () => {
                                 </div>
                                 <div>
                                     <ul className="menu-list text-xl font-semibold text-white lg:text-purple-800 flex flex-col lg:flex-row gap-10 ">
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="/" className=''>Home</Link></li>
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="">About</Link></li>
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="">Blogs</Link></li>
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="/courses">Courses</Link></li>
-                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><Link to="">Contact</Link></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><NavLink to="/">Home</NavLink></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><NavLink to="/about">About</NavLink></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><NavLink to="/blogs">Blogs</NavLink></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><NavLink to="/courses">Courses</NavLink></li>
+                                        <li className="menu hover:text-yellow-400 transition-all ease-in-out duration-300"><NavLink to="/contact">Contact</NavLink></li>
                                     </ul>
                                 </div>
                             </div>
