@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className={`navbar-wrapper shadow-md p-4 relative ${!showMobileMenu && "overflow-hidden"}`}>
+            <div className={`navbar-wrapper shadow-md p-4 relative`}>
                 <div className="container flex gap-6 items-center max-w-[1280px] mx-auto">
                     <div className="logo"><img className="max-w-[200px]" src={Logo} alt="" /></div>
                     <div className="nav-menu flex-grow">
