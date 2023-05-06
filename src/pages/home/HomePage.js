@@ -4,9 +4,9 @@ import Features from '../../components/features/Features'
 import Courses from '../../components/courses/Courses'
 import Register from '../../components/register/Register'
 import Experts from '../../components/experts/Experts'
-import Layout from './../../layouts/Layout';
+import Layout from '../../layouts/Layout';
 
-const Home = () => {
+const HomePage = () => {
     return (
         <>
             <Layout>
@@ -30,4 +30,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default HomePage
