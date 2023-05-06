@@ -4,6 +4,7 @@ import Hero from '../../components/hero/Hero'
 import Features from '../../components/features/Features'
 import Courses from '../../components/courses/Courses'
 import Register from '../../components/register/Register'
+import Experts from '../../components/experts/Experts'
 
 const Home = () => {
     return (
@@ -22,6 +23,9 @@ const Home = () => {
             </section>
             <section>
                 <Register />
+            </section>
+            <section className="px-2 py-[6rem]">
+                <Experts />
             </section>
         </>
     )
