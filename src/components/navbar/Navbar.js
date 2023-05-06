@@ -22,12 +22,12 @@ const Navbar = () => {
                 <div className="container flex gap-6 items-center max-w-[1280px] mx-auto">
                     <div className="logo"><img className="max-w-[200px]" src={Logo} alt="" /></div>
                     <div className="nav-menu flex-grow">
-                        <div className="row flex justify-end">
+                        <div className="row flex justify-end cursor-pointer">
                             <div className='hamburger text-2xl lg:hidden' onClick={handleHamburger}>
                                 <GiHamburgerMenu />
                             </div>
                             <div className={`absolute lg:static flex flex-col items-start lg:flex-row ${showMobileMenu ? "right-0" : "-right-[100%]"} top-0 bg-purple-800 bg-opacity-40 backdrop-blur-sm lg:backdrop-blur-none text-white h-screen lg:h-auto p-8 lg:p-0 lg:bg-transparent transition-all duration-500 ease-in-out`}>
-                                <div className='close text-2xl lg:hidden mb-6' onClick={handleCross} >
+                                <div className='close text-2xl lg:hidden mb-6 cursor-pointer' onClick={handleCross} >
                                     <FaTimes />
                                 </div>
                                 <div>
