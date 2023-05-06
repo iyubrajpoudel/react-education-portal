@@ -8,7 +8,7 @@ import dp from "./assets/images/pp.jpg"
 
 const ExpertCard = ({ image, name, role, fb, insta, linkedin }) => {
     return (
-        <div className='card px-4 py-8 flex flex-col gap-4 justify-center items-center bg-yellow-50 rounded-md shadow w-full md:w-[45%] lg:w-[32%]'>
+        <div className='card px-4 py-8 flex flex-col gap-4 justify-center items-center bg-yellow-50 rounded-md shadow-lg hover:shadow-xl w-full md:w-[45%] lg:w-[32%]'>
             <div className="image row">
                 <img src={image} alt="" className='rounded-full w-[12rem]' />
             </div>

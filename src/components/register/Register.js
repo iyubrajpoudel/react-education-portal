@@ -58,7 +58,7 @@ const Register = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col w-full lg:w-1/3 px-2 md:px-8">
+                    <div className="col w-full lg:w-2/5 px-2 md:px-8">
                         <div className="register-form w-full bg-white px-8 py-[4rem] space-y-8 rounded-2xl">
                             <div className='row'><h3 className='font-bold text-xl text-center lg:text-left'>Create Free Account Now!</h3></div>
                             <div className="row form-wrapper flex flex-col gap-4 ">
