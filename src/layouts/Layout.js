@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
                 <header className='fixed w-full bg-white z-50'>
                     <Navbar />
                 </header>
-                <main className='pt-[6rem]'>
+                <main className='pt-[6rem] min-h-[80vh]'>
                     {children}
                 </main>
                 <footer>
