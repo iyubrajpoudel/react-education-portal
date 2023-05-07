@@ -62,7 +62,7 @@ const Courses = () => {
                     {/* <div className="row boxes flex gap-6 flex-wrap justify-center"> */}
                     <div className="row boxes flex gap-10 md-gap-6 flex-wrap justify-center lg:justify-start">
                         <CourseCard
-                            coverImage="/courses/assets/images/c1.jpg"
+                            coverImage={course1}
                             courseTitle="Javascript Begineers Course"
                             date="2023/01/02"
                             coursePrice={19.99}
@@ -86,7 +86,7 @@ const Courses = () => {
                             raters={111}
                         />
                         <CourseCard
-                            coverImage="/courses/assets/images/c6.jpg"
+                            coverImage={course4}
                             courseTitle="Angular Begineers Course"
                             date="2023/01/02"
                             coursePrice={19.99}
