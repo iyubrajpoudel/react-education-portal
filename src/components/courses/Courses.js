@@ -1,7 +1,9 @@
 import React from 'react'
 
+import course1 from "./assets/images/c1.jpg"
 import course2 from "./assets/images/c2.jpg"
 import course3 from "./assets/images/c3.jpg"
+import course4 from "./assets/images/c6.jpg"
 
 
 const CourseCard = ({ coverImage, courseTitle, coursePrice, date, ratings, raters }) => {
