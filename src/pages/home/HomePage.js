@@ -10,21 +10,23 @@ const HomePage = () => {
     return (
         <>
             <Layout>
-                <section>
-                    <Hero />
-                </section>
-                <section className='px-2 py-[6rem]'>
-                    <Features />
-                </section>
-                <section className='px-2 py-[6rem]'>
-                    <Courses />
-                </section>
-                <section>
-                    <Register />
-                </section>
-                <section className="px-2 py-[6rem]">
-                    <Experts />
-                </section>
+                <div className='space-y-20 pb-10'>
+                    <section>
+                        <Hero />
+                    </section>
+                    <section>
+                        <Features />
+                    </section>
+                    <section>
+                        <Courses />
+                    </section>
+                    <section>
+                        <Register />
+                    </section>
+                    <section>
+                        <Experts />
+                    </section>
+                </div>
             </Layout>
         </>
     )
