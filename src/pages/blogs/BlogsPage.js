@@ -14,8 +14,8 @@ const BlogsPage = () => {
                     <Banner image={bannerImage} text={"Blogs"} />
                 </section>
                 <section>
-                    <div className="container max-w-[1280px] mx-auto row flex flex-col-reverse md:flex-row justify-between gap-10">
-                        <div className="col blogs w-full md:w-[50%] flex flex-col gap-[4rem]">
+                    <div className="container max-w-[1280px] mx-auto row flex flex-col-reverse md:flex-row justify-between gap-4 lg-gap-8">
+                        <div className="col blogs w-full md:w-[60%] lg:w-[50%] flex flex-col gap-[4rem]">
                             <div className="row p-2">
                                 <Blog title={`Learn Web Development In The Easiest Way`} image={featuredImg} excerpt={`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, praesentium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, praesentium.`} link={`/`} />
                             </div>
