@@ -1,7 +1,68 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SocialLinks from './../components/social/SocialLinks';
 
 const ContactSection = () => {
+
+    // const firebaseDB = `https://console.firebase.google.com/u/0/project/education-portal-da01c/database/education-portal-da01c-default-rtdb/data/~2F`;
+    const firebaseDB = `https://education-portal-da01c-default-rtdb.firebaseio.com`;
+    // const firebaseDB = `https://education-portal-da01c-default-rtdb.firebaseio.com`;
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+    })
+
+    const handleChange = (e) => {
+        // console.log("typed!!")
+        // console.log(e);
+        // console.log(e.target);
+        // console.log(e.target.name);
+        // console.log(e.target.value);
+
+        const { name, value } = e.target;
+        // console.log(name, value);
+
+        // setFormData({ ..., e.target.name: e.target.value })
+        // setFormData({ ...formData, name: value }) // This will always change the name key's value
+        setFormData({ ...formData, [name]: value }) // This will always change the dynamic name from event key's value
+        // console.log(formData);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // console.log(e);
+
+        // const { name, email, subject, message } = formData;
+
+        const url = `${firebaseDB}/contact_form_data.json`
+
+        const firebase = `https://education-portal-da01c-default-rtdb.firebaseio.com/contact.json`;
+
+        const data = JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+        })
+
+        postData(firebase, data);
+    }
+
+    const postData = async (endpoint, data) => {
+        try {
+            await fetch(endpoint, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: data
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
 
 
@@ -60,7 +121,7 @@ const ContactSection = () => {
                                     <h3 className='font-bold text-lg'>Stay Tuned</h3>
                                 </div>
                                 <div>
-                                    <SocialLinks />
+                                    <SocialLinks fb={`iyubrajpoudel`} insta={`iyubrajpoudel`} linkedin={`iyubrajpoudel`} />
                                 </div>
                             </div>
                         </div>
@@ -71,17 +132,17 @@ const ContactSection = () => {
                             <p className='text-lg text-gray-600'>Integer at lorem eget diam facilisis lacinia ac id massa.</p>
                         </div>
                         <div className="form-wrapper mt-4 py-4">
-                            <form action="">
+                            <form action="" onSubmit={(e) => handleSubmit(e)}>
                                 <div className='row flex flex-col gap-4'>
                                     <div className="row flex flex-col md:flex-row gap-4 md:gap-8">
-                                        <input type="text" name="name" id="nameInput" placeholder='Your Name' className='md:w-1/2 outline-blue-200 py-4 px-8 rounded-md' />
-                                        <input type="email" name="email" id="emailInput" placeholder='Your Email' className='md:w-1/2 outline-blue-200 py-4 px-8 rounded-md' />
+                                        <input type="text" name="name" id="nameInput" placeholder='Your Name' className='md:w-1/2 outline-blue-200 py-4 px-8 rounded-md' value={formData.name} onChange={(e) => handleChange(e)} required />
+                                        <input type="email" name="email" id="emailInput" placeholder='Your Email' className='md:w-1/2 outline-blue-200 py-4 px-8 rounded-md' value={formData.email} onChange={(e) => handleChange(e)} required />
                                     </div>
                                     <div className="row">
-                                        <input type="text" name="subject" id="subjectInput" placeholder='Subject' className='w-full outline-blue-200 py-4 px-8 rounded-md' />
+                                        <input type="text" name="subject" id="subjectInput" placeholder='Subject' className='w-full outline-blue-200 py-4 px-8 rounded-md' value={formData.subject} onChange={(e) => handleChange(e)} required />
                                     </div>
                                     <div className="row">
-                                        <textarea name="message" id="messageInput" rows="8" placeholder='How can we help?' className='w-full max-h-[20rem] outline-blue-200 py-4 px-8 rounded-md'></textarea>
+                                        <textarea name="message" id="messageInput" rows="8" placeholder='How can we help?' className='w-full max-h-[20rem] outline-blue-200 py-4 px-8 rounded-md' onChange={(e) => handleChange(e)} required>{formData.message}</textarea>
                                     </div>
                                     <div className="row">
                                         <button type="submit" className='bg-purple-800 hover:bg-purple-900 text-white font-semibold px-6 py-3 rounded-full'>Send Message</button>

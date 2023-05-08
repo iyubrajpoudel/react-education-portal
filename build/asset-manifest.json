@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-education-portal/static/css/main.80914677.css",
-    "main.js": "/react-education-portal/static/js/main.f554de24.js",
+    "main.css": "/react-education-portal/static/css/main.f6dcc66a.css",
+    "main.js": "/react-education-portal/static/js/main.90506cd9.js",
     "static/media/a.png": "/react-education-portal/static/media/a.65836cdba6024f01719a.png",
     "static/media/back2.jpg": "/react-education-portal/static/media/back2.262774c8ebaaca7f7823.jpg",
     "static/media/back.jpg": "/react-education-portal/static/media/back.b60f605ebd14a29bf2eb.jpg",
@@ -23,11 +23,11 @@
     "static/media/client (1).png": "/react-education-portal/static/media/client (1).6abbe7bc1fe639703f6d.png",
     "static/media/client (3).png": "/react-education-portal/static/media/client (3).f353b0c903ac2fda8404.png",
     "index.html": "/react-education-portal/index.html",
-    "main.80914677.css.map": "/react-education-portal/static/css/main.80914677.css.map",
-    "main.f554de24.js.map": "/react-education-portal/static/js/main.f554de24.js.map"
+    "main.f6dcc66a.css.map": "/react-education-portal/static/css/main.f6dcc66a.css.map",
+    "main.90506cd9.js.map": "/react-education-portal/static/js/main.90506cd9.js.map"
   },
   "entrypoints": [
-    "static/css/main.80914677.css",
-    "static/js/main.f554de24.js"
+    "static/css/main.f6dcc66a.css",
+    "static/js/main.90506cd9.js"
   ]
 }
