@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import SocialLinks from './../components/social/SocialLinks';
 
+import { db } from '../config/firebaseConfig';
+import { addDoc, collection } from 'firebase/firestore';
+
 const ContactSection = () => {
 
     // const firebaseDB = `https://console.firebase.google.com/u/0/project/education-portal-da01c/database/education-portal-da01c-default-rtdb/data/~2F`;
-    const firebaseDB = `https://education-portal-da01c-default-rtdb.firebaseio.com`;
+    // const firebaseDB = `https://education-portal-da01c-default-rtdb.firebaseio.com`;
     // const firebaseDB = `https://education-portal-da01c-default-rtdb.firebaseio.com`;
 
     const [formData, setFormData] = useState({
@@ -13,6 +16,8 @@ const ContactSection = () => {
         subject: "",
         message: ""
     })
+
+    const contactCollection = collection(db, "contactdata");
 
     const handleChange = (e) => {
         // console.log("typed!!")
@@ -32,24 +37,35 @@ const ContactSection = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        addDoc(contactCollection, {
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+        })
         // console.log(e);
 
         // const { name, email, subject, message } = formData;
 
-        const url = `${firebaseDB}/contact_form_data.json`
+        // const url = `${firebaseDB}/contact_form_data.json`
 
-        const firebase = `https://education-portal-da01c-default-rtdb.firebaseio.com/contact.json`;
+        // const firebase = `https://education-portal-da01c-default-rtdb.firebaseio.com/contact.json`;
 
+        /*
         const data = JSON.stringify({
             name: formData.name,
             email: formData.email,
             subject: formData.subject,
             message: formData.message,
         })
+        */
 
-        postData(firebase, data);
+        // postData(firebase, data);
     }
 
+
+    /* 
     const postData = async (endpoint, data) => {
         try {
             await fetch(endpoint, {
@@ -64,7 +80,7 @@ const ContactSection = () => {
         }
     }
 
-
+ */
 
     return (
         <div className="wrapper">
