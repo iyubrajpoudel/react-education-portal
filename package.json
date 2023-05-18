@@ -1,5 +1,4 @@
 {
-  "homepage": "https://iyubrajpoudel.github.io/react-education-portal",
   "name": "react-education-portal",
   "version": "0.1.0",
   "private": true,
@@ -44,5 +43,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"
-  }
+  },
+  "homepage": "https://iyubrajpoudel.github.io/react-education-portal"
 }

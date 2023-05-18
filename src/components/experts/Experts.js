@@ -3,7 +3,9 @@ import React from 'react'
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 // images
-import dp from "./assets/images/pp.jpg"
+import pp1 from "./assets/images/my_pp.jpg"
+import pp2 from "./assets/images/jaya_pp.jpg"
+import pp3 from "./assets/images/yogesh_pp.jpg"
 
 
 const ExpertCard = ({ image, name, role, fb, insta, linkedin }) => {
@@ -35,9 +37,9 @@ const Experts = () => {
                         <p className='text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div className="row cards-row py-[4rem] md:px-[2rem] flex gap-6 flex-col justify-center items-center md:flex-row md:justify-start flex-wrap">
-                        <ExpertCard image={dp} name={`Yubraj Poudel`} role={`Web Developer`} fb={`iyubrajpoudel`} insta={`iyubrajpoudel`} linkedin={`iyubrajpoudel`} />
-                        <ExpertCard image={dp} name={`Yubraj Poudel`} role={`Web Developer`} fb={`iyubrajpoudel`} insta={`iyubrajpoudel`} linkedin={`iyubrajpoudel`} />
-                        <ExpertCard image={dp} name={`Yubraj Poudel`} role={`Web Developer`} fb={`iyubrajpoudel`} insta={`iyubrajpoudel`} linkedin={`iyubrajpoudel`} />
+                        <ExpertCard image={pp1} name={`Yubraj Poudel`} role={`Web Developer`} fb={`iyubrajpoudel`} insta={`iyubrajpoudel`} linkedin={`iyubrajpoudel`} />
+                        <ExpertCard image={pp2} name={`Jaya Poudel`} role={`Business Analyst`} fb={``} insta={``} linkedin={``} />
+                        <ExpertCard image={pp3} name={`Yogesh Bhattarai`} role={`Project Manager`} fb={``} insta={``} linkedin={``} />
                     </div>
                 </div>
             </div>
